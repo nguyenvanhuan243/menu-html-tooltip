@@ -115,6 +115,8 @@
                 const item = target.matches('[data-tooltip]') ? target : target.closest('[data-tooltip]');
                 if (item) {
                     const { top, right } = item.getBoundingClientRect();
+                    console.log("############################################: Top", top)
+                    console.log("############################################: Right", right)
                     tooltip.style.top = `${top}px`;
                     tooltip.style.left = `${right + 10}px`;
                     tooltip.innerText = item.dataset.tooltip;
