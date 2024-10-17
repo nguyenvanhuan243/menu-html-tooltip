@@ -108,6 +108,7 @@
             }
             
             const tooltip = document.querySelector('.tooltip');
+            console.log("tooltip ############################################", tooltip)
             
             const navList = document.querySelector('.nav-list');
             navList.addEventListener('mouseover', ({ target }) => {
@@ -118,12 +119,14 @@
                     tooltip.style.left = `${right + 10}px`;
                     tooltip.innerText = item.dataset.tooltip;
                     tooltip.classList.add('show');
+                    console.log("tooltip ############################################ add: ", tooltip.classList)
                 }
             });
             navList.addEventListener('mouseout', ({ target }) => {
                 const item = target.matches('[data-tooltip]') ? target : target.closest('[data-tooltip]');
                 if (item) {
                     tooltip.classList.remove('show');
+                    console.log("tooltip ############################################ remove: ", tooltip.classList)
                 }
             });
         </script>
